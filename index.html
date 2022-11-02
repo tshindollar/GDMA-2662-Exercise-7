@@ -7,6 +7,9 @@
 
 <title>Ex. 7</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/main.css">
@@ -14,32 +17,114 @@
 
 </head>
 <body>
-
     <div class="wrapper">
         <div class="row">
-
-            <div class="col-sm-6 col-md-3 col-lg-6">
-                <div></div>
-            </div>
-
-            <div class="col-sm-6 col-md-9 col-lg-6">
-                <div></div>
-            </div>
-
+            <header class="col-sm-12 col-md-12 col-lg-12">
+                <div>
+                    <h1>Responsive Grid</h1>
+                </div>
+            </header>
         </div>
 
         <div class="row">
-            <div class="col-sm-12 col-md-5 col-lg-3">
-                <div></div>
+            <div class="col-sm-8 col-md-9 col-lg-6">
+                <div>
+                    <p>Responsive web design helps with matters of layout, but it is not a solution to all mobile web design challenges. The fact is that providing the best experiences for your users and their chosen device may require optimizations that go beyond adjusting the look and feel. Some problems are better addressed by using the server to detect the device and its capabilities and then making decisions on what to send back. Using progressive enhancement, you can deliver a baseline experience for the most basic browsers and devices, but send enhanced options for devices that can use them.</p>
+                </div>
             </div>
-            <div class="col-sm-12 col-md-5 col-lg-9">
-                <div></div>
+
+            <div class="col-sm-4 col-md-3 col-lg-6">
+                <div>
+                    <p>For some sites and services, it may be preferable to build a separate mobile site with a customized interface and feature set that takes advantage of phone capabilities like geolocation. That said, although responsive design won't fix everything, it is an important part of the solution for delivering satisfactory experiences on a wide variety of browsers.</p>
+                </div>
             </div>
-            <div class="col-sm-12 col-md-2">
-                <div></div>
-            </div>
-        
         </div>
+
+        <div class="row">
+            <div class="col-sm-7 col-md-6 col-lg-5">
+                <div>
+                    <ul>Responsive Design Requires:</ul>
+                    <li>Fluid layouts</li>
+                    <li>Flexible images</li>
+                    <li>CSS media queries</li>
+                    <li>Meta viewport</li>
+                </div>
+            </div>
+
+            <div class="col-sm-5 col-md-6 col-lg-7">
+                <div>
+                    <p>Fluid layouts are created using percentage width measurements so that elements resize proportionally to fill the available width of the screen or window.</p><br>
+
+                    <p>Images need to scale down to fit the width of the container they are in. If the container is larger than the image&mdash;for example, in the tablet or desktop layouts&mdash;the image does not scale larger; it stops at 100% of its original size.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div>
+                    <p>Media queries allow designers to deliver styles based on media type. The defined media types are print, speech, handheld, braille, projection, screen tty, and tv. The keyword all indicates that the styles apply to all media types. Media queries can also evaluate specific media features, such as the device-width, orientation, and resolution.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-8 col-lg-8">
+                <div>
+                    <p>To fit standard websites onto small screens, mobile browsers render the page on a canvas called the viewport and then shrink that viewport down to fit the width of the screen (device width).</p><br>
+
+                    <p>This line tells the browser to set the width of the viewport equal to the width of the device screen (width=device-width), whatever that happens to be. The nitial-scale sets the zoom level to 1 (100%).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 col-md-6 col-lg-3">
+                <div>
+                    <h2>EMs</h2>
+                </div>
+            </div>
+
+            <div class="col-sm-8 col-md-6 col-lg-9">
+                <div>
+                    <p>An em is a relative unit of measurement. Once the dimension of an em for a text element is calculated by the browser, it can be used for all sorts of other measurements, such as indents, margins, the width of the element on the page, and so on.</p><br>
+
+                    <p>The tricky aspect to using ems is that they are based on the inherited size of the element, which means that their size is based on the context in which they are applied. If you have many nested elements, the size increase or decrease will compound with each nested level.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <div>
+                    <h2>REMs</h2>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-8 col-lg-10">
+                <div>
+                    <p>A rem is a relative unit of measurement. Once the dimension of an em for a text element is calculated by the browser, it can be used for all sorts of other measurements, such as indents, margins, the width of the element on the page, and so on.</p><br>
+                    
+                    <p>If you specify the size of the html element (presumably to 100%), all elements that are specified in rem measurements will be relative to that size, not their inherited size. This gets rid of the compounding issue that makes ems potentially aggravating.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-7 col-md-3 col-lg-1" id="bg-hand"></div>
+
+            <div class="col-sm-5 col-md-9 col-lg-11">
+                <div>
+                    <p>Although some developers prefer pixel font measurements for the precise control they offer, the predominant attitude is that they are too rigid and that relative measurements (em and %) are more appropriate to the medium. As long as we are kicking px to the curb, all of the absolute units&mdash;such as pt, pc, in, mm, and cm&mdash;are out because they are irrelevant on screens (although they may be useful for print style sheets).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-9 col-md-12 col-lg-6">
+                <img src="img/colored-pencils.jpg" alt="" class="img-responsive">
+            </div>
+        </div>
+
+
 
     </div>
 

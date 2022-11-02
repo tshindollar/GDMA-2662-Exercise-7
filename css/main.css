@@ -12,8 +12,7 @@
         - Framework
 6.0 - Components: specific designed components
         - Header
-        - Navigation
-        - Footer
+        - Images
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         
 --------------------------------------------------------------*/
@@ -33,6 +32,8 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -41,9 +42,80 @@
 
 /* ----- TYPOGRAPHY ----- */ 
 
-/* @media screen and (min-width: 768px) {
-    p
-} */
+p,
+ul,
+li {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+p,
+ul {
+    margin: 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 52px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+ul {
+    padding: 0;
+    font-size: 12px;
+}
+
+li {
+    font-size: 12px;
+    line-height: 16px;
+    padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+
+    p,
+    ul,
+    li {
+        font-size: 14px;
+        line-height: 22px;
+    }
+   
+    h1 {
+        font-size: 48px;
+    }
+    
+    h2 {
+        font-size: 36px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    p,
+    ul,
+    li {
+        margin: 0;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    h1 {
+        font-size: 75px;
+        margin: 20px 0;
+    }
+    
+    h2 {
+        font-size: 45px;
+    }
+
+}
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -62,11 +134,16 @@
     flex-flow: wrap;
 }
 
+.img-responsive {
+    max-width: 100%;
+}
+
 /* this chunk is explicit for exercise 7 */
 
 [class*='col-'] div {
-    background-color: gray;
-    height: 200px;
+    background-color: #D9D9D9;
+    height: 100%;
+    padding: 20px;
 }
 
 /* you will need to keep the padding going forward */
@@ -247,12 +324,22 @@
 
 /* ----- HEADER ----- */
 
+header {
+    justify-content: center;
+}
 
-/* ----- NAV ----- */
+/* ----- IMAGES ----- */
 
+.row:last-child {
+    justify-content: center;
+}
 
-/* ----- FOOTER ----- */
-
-
-
-
+#bg-hand {
+    background: url(../img/hand.jpg) no-repeat center;
+    -webkit-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-clip: content-box;
+}
